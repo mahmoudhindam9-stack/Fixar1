@@ -1,0 +1,131 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "System user",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" },
+        "username": { "type": "string" },
+        "password": { "type": "string" },
+        "role": { "type": "string" },
+        "isAvailable": { "type": "boolean" },
+        "lastActive": { "type": "string" },
+        "phone": { "type": "string" }
+      },
+      "required": ["id", "name", "role"]
+    },
+    "WorkOrder": {
+      "title": "WorkOrder",
+      "description": "Maintenance work order",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "orderNumber": { "type": "number" },
+        "title": { "type": "string" },
+        "description": { "type": "string" },
+        "facilityId": { "type": "string" },
+        "status": { "type": "string" }
+      },
+      "required": ["id", "title"]
+    },
+    "Facility": {
+      "title": "Facility",
+      "description": "Facility",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "InventoryItem": {
+      "title": "InventoryItem",
+      "description": "Inventory item",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string" }
+      }
+    },
+    "FinanceTransaction": {
+      "title": "FinanceTransaction",
+      "description": "Financial transaction",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "amount": { "type": "number" }
+      }
+    },
+    "EmployeeRecord": {
+      "title": "EmployeeRecord",
+      "description": "Employee record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" }
+      }
+    },
+    "AttendanceRecord": {
+      "title": "AttendanceRecord",
+      "description": "Attendance record",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" }
+      }
+    },
+    "CustomRole": {
+      "title": "CustomRole",
+      "description": "Custom role",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" }
+      }
+    },
+    "PreventiveMaintenanceTask": {
+      "title": "PreventiveMaintenanceTask",
+      "description": "Preventive Maintenance Task",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "User",
+      "description": "Users"
+    },
+    "/workOrders/{orderId}": {
+      "schema": "WorkOrder",
+      "description": "Work Orders"
+    },
+    "/facilities/{facilityId}": {
+      "schema": "Facility",
+      "description": "Facilities"
+    },
+    "/inventory/{itemId}": {
+      "schema": "InventoryItem",
+      "description": "Inventory items"
+    },
+    "/transactions/{transactionId}": {
+      "schema": "FinanceTransaction",
+      "description": "Financial transactions"
+    },
+    "/employees/{employeeId}": {
+      "schema": "EmployeeRecord",
+      "description": "Employees"
+    },
+    "/attendanceRecords/{recordId}": {
+      "schema": "AttendanceRecord",
+      "description": "Attendance"
+    },
+    "/customRoles/{roleId}": {
+      "schema": "CustomRole",
+      "description": "Custom roles"
+    },
+    "/preventiveTasks/{taskId}": {
+      "schema": "PreventiveMaintenanceTask",
+      "description": "Tasks"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Dark Background -->
+    <linearGradient id="iconBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19" />
+      <stop offset="50%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+
+    <!-- Emerald Vibrant Accent -->
+    <linearGradient id="emeraldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+
+    <!-- Cyan Electric Accent -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+
+    <!-- Emerald Glow -->
+    <filter id="iconGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#10b981" flood-opacity="0.35" />
+    </filter>
+  </defs>
+
+  <!-- App Icon Base Squircle -->
+  <rect width="512" height="512" rx="112" fill="url(#iconBg)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="3" />
+
+  <!-- Inner Tech Circle Frame -->
+  <circle cx="256" cy="256" r="210" fill="none" stroke="#ffffff" stroke-opacity="0.04" stroke-width="2" />
+  <circle cx="256" cy="256" r="190" fill="none" stroke="#10b981" stroke-opacity="0.1" stroke-width="1.5" stroke-dasharray="12 12" />
+
+  <!-- Central Shield & Precision Wrench Emblem -->
+  <g transform="translate(106, 106)" filter="url(#iconGlow)">
+    <!-- Hexagon Shield Base -->
+    <polygon points="150,20 270,90 270,230 150,300 30,230 30,90" fill="url(#emeraldGrad)" />
+
+    <!-- Hex Nut Opening Cutout -->
+    <circle cx="150" cy="160" r="58" fill="#0b0f19" />
+
+    <!-- Wrench Notch Cross / Precision Target -->
+    <path d="M 110,120 L 190,200 M 190,120 L 110,200" stroke="url(#cyanGrad)" stroke-width="16" stroke-linecap="round" />
+
+    <!-- Core Bright Node -->
+    <circle cx="150" cy="160" r="18" fill="#ffffff" />
+  </g>
+</svg>

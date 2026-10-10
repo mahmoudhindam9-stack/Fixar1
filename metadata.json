@@ -1,0 +1,6 @@
+{
+  "name": "Fixar",
+  "description": "برنامج متكامل لإدارة الصيانة، الموارد البشرية، المخازن، والمالية",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
